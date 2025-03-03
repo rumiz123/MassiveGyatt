@@ -126,7 +126,8 @@ footer {
 .blog-list::before {
     content: none;
 }
-/*the image placeholder*/
+
+/* The image placeholder */
 .image-placeholder {
     text-align: center;
     padding: 2rem;
@@ -135,4 +136,54 @@ footer {
     margin: 1rem 0;
     border: 1px dashed #ccc;
     border-radius: 5px;
+}
+
+/* Popup Styling */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px; /* Matches other elements */
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #ddd; /* Consistent with blog articles */
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #333; /* Matches h2 styling */
+    font-size: 1.5rem; /* Slightly smaller than main h2 for hierarchy */
+}
+
+.popup-content p {
+    margin: 10px 0;
+    color: #666; /* Matches other secondary text */
+}
+
+.popup-content button {
+    padding: 0.5rem 1rem; /* Matches join-button padding */
+    background-color: #000; /* Matches header theme */
+    color: white;
+    border: 2px solid #fff; /* Matches join-button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.popup-content button:hover {
+    background-color: #fff; /* Inverts like join-button */
+    color: #000;
+    border: 2px solid #000; /* Keeps it cohesive */
 }
