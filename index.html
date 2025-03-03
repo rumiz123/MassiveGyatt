@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Massive Gyatt - Jiajun Gyatt Blog</title>
+    <!-- SEO Tags -->
+    <meta name="description" content="The ultimate blog dedicated to Jiajun’s massive gyatt. Pure satire, pure chaos, and soon-to-be pics of the legendary booty.">
+    <meta name="keywords" content="Jiajun, gyatt, massive gyatt, humor, satire, blog, booty, comedy">
+    <meta name="author" content="Massive Gyatt Crew">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,15 +27,32 @@
         
         <div class="blog-list">
             <article>
+                <h2><a href="Jiajun-Gyatt-Records">Jiajun’s Gyatt Breaks World Records</a></h2>
+                <p class="date">March 2, 2025</p>
+                <p>Scientists confirm Jiajun’s gyatt is visible from space. Pics coming soon—NASA’s on it.</p>
+            </article>
+            <article>
                 <h2><a href="Jiajun-Zu">Jiajuns Massive Gyatt</a></h2>
                 <p class="date">March 1, 2025</p>
-                <p>Jiajuns Gyatt is Massive. This blog post talks about it and will soon have pictures</p>
+                <p>Jiajuns Gyatt is Massive and this blog post talks about it and will soon have pictures</p>
             </article>
         </div>
+
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Gyatt Testimonials</h2>
+            <form id="testimonialForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="comment" placeholder="Praise the gyatt..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="testimonialList"></div>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin 
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin 
             RAHHHHHHHHHHHHHHHHHHHHHHH
         </p>
     </footer>
@@ -45,7 +67,7 @@
     </div>
 
     <script>
-        // Function to set a cookie
+        // ToS Popup Logic
         function setCookie(name, value, days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -53,7 +75,6 @@
             document.cookie = name + "=" + value + ";" + expires + ";path=/";
         }
 
-        // Function to get a cookie
         function getCookie(name) {
             const nameEQ = name + "=";
             const cookies = document.cookie.split(';');
@@ -65,18 +86,41 @@
             return null;
         }
 
-        // Function to show/hide popup and set cookie on accept
         function acceptToS() {
-            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            setCookie('tosAccepted', 'true', 365);
             document.getElementById('tosPopup').style.display = 'none';
         }
 
-        // Check if ToS has been accepted on page load
         window.onload = function() {
             if (!getCookie('tosAccepted')) {
                 document.getElementById('tosPopup').style.display = 'flex';
             }
         };
+
+        // Testimonials Logic
+        document.getElementById('testimonialForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const comment = e.target.comment.value;
+            const testimonialDiv = document.createElement('div');
+            testimonialDiv.classList.add('testimonial');
+            testimonialDiv.innerHTML = `<p><strong>${name}:</strong> ${comment}</p>`;
+            document.getElementById('testimonialList').appendChild(testimonialDiv);
+            e.target.reset(); // Clear form
+            // Save to localStorage
+            const testimonials = JSON.parse(localStorage.getItem('gyattTestimonials') || '[]');
+            testimonials.push({ name, comment });
+            localStorage.setItem('gyattTestimonials', JSON.stringify(testimonials));
+        });
+
+        // Load existing testimonials from localStorage
+        const savedTestimonials = JSON.parse(localStorage.getItem('gyattTestimonials') || '[]');
+        savedTestimonials.forEach(({ name, comment }) => {
+            const testimonialDiv = document.createElement('div');
+            testimonialDiv.classList.add('testimonial');
+            testimonialDiv.innerHTML = `<p><strong>${name}:</strong> ${comment}</p>`;
+            document.getElementById('testimonialList').appendChild(testimonialDiv);
+        });
     </script>
 </body>
 </html>

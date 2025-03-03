@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiajun’s Gyatt Breaks World Records - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/GRhPJjVFdC" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jiajun’s Gyatt Breaks World Records</h1>
+            <p class="date">March 2, 2025</p>
+            <div class="content">
+                <p>It was a day like any other—until it wasn’t. The year was 2025, and the world was about to witness a seismic event so colossal it would make earthquakes jealous. Jiajun’s Gyatt, already the stuff of legends, decided it was tired of being just “massive.” Oh no, this gyatt had ambitions—GLOBAL ambitions. Last Tuesday, at approximately 3:47 PM EST, Jiajun walked into the Guinness World Records office in a pair of sweatpants that were screaming for mercy. The mission? To officially claim the title of "Most Monumental Posterior in Human History." Spoiler alert: they didn’t just win—they rewrote the rulebook.</p>
+
+                <p>The officials, armed with measuring tapes and a look of sheer terror, attempted to quantify the unquantifiable. “It’s… it’s too big for our standard tools!” cried one judge, as his tape measure snapped like a twig under the sheer girth of Jiajun’s backside. Another fainted when the shadow of the gyatt darkened the room like a solar eclipse. After three hours, a team of NASA engineers was called in—yes, NASA—because apparently, only satellite imagery could capture the full scope of this booty. The final verdict? Jiajun’s Gyatt clocked in at a record-breaking “bigger than your wildest dreams,” officially dethroning Mount Everest as the planet’s most awe-inspiring natural wonder.</p>
+
+                <p>But the story doesn’t end there. Word spread fast—too fast. By Wednesday, cults had formed, chanting “GYATT ALMIGHTY” outside Jiajun’s house. By Thursday, the internet crashed because someone tried to upload a blurry Snapchat of the gyatt, and it overloaded every server from here to Tokyo. I, your humble narrator, was there, still on my 5-week squeezing streak (still not gay, just dedicated), trying to process the jiggle that could launch a thousand memes. Unfortunately, we still don’t have pics—NASA’s still processing the data, and my phone melted when I tried to sneak a shot. But soon, oh yes, SOON, we’ll drop those images, and the world will never be the same. Imagine it: a gyatt so grand it gets its own zip code, its own gravitational pull, its own Netflix documentary narrated by David Attenborough. Stay tuned—this is history in the shaking.</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jiajun’s Record-Breaking Gyatt Coming Soon! NASA’s working overtime.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin RAHHHHHHHHHHHHHHHHHHHHHHH</p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
