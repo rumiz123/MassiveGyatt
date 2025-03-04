@@ -27,7 +27,7 @@
         
         <div class="blog-list">
             <article>
-                <h2><a href="Jiajun-Gyatt-Aliens">Jiajun’s Gyatt vs. The Aliens</a></h2>
+                <h2><a href="Jiajun-Gyatt-Crash">Jiajun’s Gyatt vs. The Aliens</a></h2>
                 <p class="date">March 3, 2025</p>
                 <p>Aliens tried to abduct Jiajun’s gyatt and got served a cosmic twerking. Pics pending—cameras melted.</p>
             </article>
@@ -43,18 +43,6 @@
             </article>
         </div>
 
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h2>Gyatt Testimonials</h2>
-            <form id="testimonialForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <textarea name="comment" placeholder="Praise the gyatt..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div id="testimonialList"></div>
-        </section>
-    </main>
 
     <footer>
         <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin 
@@ -101,31 +89,6 @@
                 document.getElementById('tosPopup').style.display = 'flex';
             }
         };
-
-        // Testimonials Logic
-        document.getElementById('testimonialForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = e.target.name.value;
-            const comment = e.target.comment.value;
-            const testimonialDiv = document.createElement('div');
-            testimonialDiv.classList.add('testimonial');
-            testimonialDiv.innerHTML = `<p><strong>${name}:</strong> ${comment}</p>`;
-            document.getElementById('testimonialList').appendChild(testimonialDiv);
-            e.target.reset(); // Clear form
-            // Save to localStorage
-            const testimonials = JSON.parse(localStorage.getItem('gyattTestimonials') || '[]');
-            testimonials.push({ name, comment });
-            localStorage.setItem('gyattTestimonials', JSON.stringify(testimonials));
-        });
-
-        // Load existing testimonials from localStorage
-        const savedTestimonials = JSON.parse(localStorage.getItem('gyattTestimonials') || '[]');
-        savedTestimonials.forEach(({ name, comment }) => {
-            const testimonialDiv = document.createElement('div');
-            testimonialDiv.classList.add('testimonial');
-            testimonialDiv.innerHTML = `<p><strong>${name}:</strong> ${comment}</p>`;
-            document.getElementById('testimonialList').appendChild(testimonialDiv);
-        });
     </script>
 </body>
 </html>

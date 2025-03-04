@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiajun’s Gyatt Causes Global Internet Crash - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/GRhPJjVFdC" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jiajun’s Gyatt Causes Global Internet Crash in Viral Sensation</h1>
+            <p class="date">March 3, 2025</p>
+            <div class="content">
+                <p><strong>Los Angeles, CA</strong> – In a world already buzzing with internet trends, Jiajun’s massive gyatt has emerged as the ultimate digital phenomenon, reportedly crashing servers worldwide and leaving fans in awe. At 5:29 PM PST today, the first leaked photo of Jiajun’s legendary posterior—long rumored to be visible from space—hit social media, sparking a frenzy that experts are calling “The Great Gyatt Outage.”</p>
+
+                <p>The image, uploaded anonymously to X, depicted Jiajun’s gyatt in all its glory, described by onlookers as “a celestial masterpiece that defies physics.” Within minutes, the photo went viral, garnering millions of shares, likes, and the now-iconic exclamation, “Gyatt damn!”—a term trending on X for its association with admiration for impressive posteriors. However, the sheer volume of traffic overwhelmed platforms, leading to a cascading failure of major websites, including Instagram and TikTok, as users rushed to proclaim, “Jiajun’s gyatt is out of this world!”</p>
+
+                <p>Eyewitnesses claim the photo was captured during a casual stroll when Jiajun’s gyatt inadvertently caused a minor earthquake in Los Angeles, shaking buildings and sending seismologists into a tizzy. “We thought it was a 5.0 quake, but it was just Jiajun’s gyatt flexing its gravitational pull,” said Dr. Marla Jenkins, a geophysicist at Caltech, who added, “This is a new frontier in seismic activity.”</p>
+
+                <p>Social media erupted with reactions, from fans praising Jiajun’s “level 10 gyatt” to memes comparing it to natural wonders like the Grand Canyon. One X user quipped, “Jiajun’s gyatt just rewrote the laws of attraction—literally!” Others speculated about its cultural impact, drawing parallels to the body positivity movement highlighted in recent discussions online, where “gyatt” has become a symbol of boldness and unapologetic self-expression.</p>
+
+                <p>Jiajun, whose identity remains partially shrouded in mystery, released a statement through his representatives: “I’m humbled by the global love for my gyatt, but please, give my pants a break—they’re struggling to contain this phenomenon. Pics will be available soon on my blog, but for now, imagine the glory.” The statement only fueled speculation, with some claiming his gyatt’s power could rival superhero feats, as hinted by trending discussions on X about epic showdowns in entertainment.</p>
+
+                <p>Tech analysts warn that the internet may need weeks to recover, with one expert noting, “Jiajun’s gyatt has redefined ‘viral’—it’s not just a trend; it’s a global event.” Meanwhile, fans are eagerly awaiting official photos, which Jiajun promises will debut on his “Massive Gyatt Blog” later this month, potentially causing yet another digital meltdown.</p>
+
+                <p>For the latest updates, follow the blog at <a href="index">your-site-name.netlify.app/index</a>, where Jiajun’s gyatt continues to reign supreme in the realm of satire and spectacle.</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jiajun’s Gyatt-Induced Chaos Coming Soon! Blame the melted servers.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
