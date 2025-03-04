@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob’s Gyatt Debuts with Earth-Shaking Jiggle - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/GRhPJjVFdC" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jacob’s Gyatt Debuts with Earth-Shaking Jiggle</h1>
+            <p class="date">March 4, 2025</p>
+            <div class="content">
+                <p>Yesterday, the world witnessed the arrival of a new gyatt legend: Jacob’s massive posterior, which debuted with a jiggle so powerful it registered as a 3.2 magnitude tremor on the Richter scale. At 9:17 AM EST, Jacob strolled through New York City, his gyatt causing sidewalks to crack, pigeons to take flight, and fans to scream, “Gyatt damn, Jacob!”</p>
+
+                <p>Experts are calling it “The Jiggle Heard ‘Round the World,” with seismologists scrambling to recalibrate their instruments. “We’ve never seen a gyatt with this kind of seismic potential,” said Dr. Sanjay Patel, a geologist at Columbia University. “It’s not just impressive—it’s a natural disaster waiting to happen.”</p>
+
+                <p>Jacob, a mysterious figure rivaling Jiajun in gyatt fame, issued a statement: “I’m just trying to live my life, but my gyatt has a mind of its own. Pics are coming soon—hold onto your hats!” Social media exploded with #JacobGyatt trending on X, with fans debating whether his jiggle could outshine Jiajun’s. “It’s a gyatt-off for the ages,” one user posted, igniting speculation of an epic showdown.</p>
+
+                <p>Stay tuned to the Massive Gyatt Blog for official photos and updates on Jacob’s gyatt, which promises to shake the internet—and the Earth—once more. Follow us at <a href="index">your-site-name.netlify.app/index</a> for the latest gyatt news.</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jacob’s Earth-Shaking Gyatt Coming Soon! Brace for impact.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>

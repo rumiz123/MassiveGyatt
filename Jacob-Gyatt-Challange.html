@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob’s Gyatt Challenges Jiajun in Epic Showdown - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/GRhPJjVFdC" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jacob’s Gyatt Challenges Jiajun in Epic Showdown</h1>
+            <p class="date">March 4, 2025</p>
+            <div class="content">
+                <p>The gyatt universe shook today as Jacob’s massive posterior challenged Jiajun’s legendary gyatt in an unprecedented twerk-off at Madison Square Garden. At 7:42 PM EST, the two titans faced off, their booties clashing with seismic force, registering a 4.5 magnitude tremor that knocked out power across New York City.</p>
+
+                <p>Fans chanted, “Gyatt for the win!” as Jacob’s jiggle sent shockwaves rivaling Jiajun’s iconic quake from earlier this week. “It’s a gyatt-off for the ages,” screamed announcer Big Booty Bob, as the crowd lost their minds. Jiajun countered with a signature twerk that nearly collapsed the arena, but Jacob’s gyatt responded with a bounce heard ‘round the world, earning a standing ovation.</p>
+
+                <p>No victor was declared—yet—but both gyatts left the stage unscathed, promising a rematch. “My gyatt’s ready to shake the planet again,” Jacob boasted, while Jiajun retorted, “The original gyatt reigns supreme.” Social media exploded with #GyattShowdown trending on X, with fans divided but united in awe. Official pics are still pending—cameras melted under the pressure—but stay tuned for the sequel on <a href="index">your-site-name.netlify.app/index</a>.</p>
+            </div>
+            <div class="image-placeholder">Pictures of the Gyatt Showdown Coming Soon! Blame the melted lenses.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
