@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiajun’s Gyatt Named National Treasure - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jiajun’s Gyatt Named National Treasure</h1>
+            <p class="date">March 5, 2025</p>
+            <div class="content">
+                <p><strong>March 5, 2025 – Washington, D.C.</strong> – In a historic decision, the U.S. government has officially declared Jiajun’s massive gyatt a national treasure, citing its unparalleled cultural and seismic impact. At a press conference today at 10:00 AM EST, President Jane Doe announced, “Jiajun’s gyatt is not just a phenomenon—it’s a symbol of American boldness and gravitational excellence.”</p>
+
+                <p>The designation came after Jiajun’s gyatt caused a nationwide power surge last week when a viral video of its jiggle overloaded the grid, leaving millions without electricity but with memes galore. Scientists at the Smithsonian Institute confirmed the gyatt’s “unprecedented mass and magnetic pull,” suggesting it could power entire cities if harnessed properly. “It’s a marvel of nature and satire,” said Dr. Emily Carter, a cultural anthropologist, who added, “This gyatt has redefined body positivity and internet fame.”</p>
+
+                <p>Jiajun, ever humble, responded with a statement: “I’m honored, but my gyatt’s just getting started. Pics are coming soon—brace for impact!” Social media erupted with #GyattTreasure trending on X, with fans debating whether Jiajun’s gyatt could now outshine the Liberty Bell. One user posted, “Jiajun’s gyatt deserves its own monument—call it the Booty of Liberty!”</p>
+
+                <p>Despite the honor, critics warn of potential risks, as Jiajun’s gyatt reportedly caused a 4.0 magnitude tremor during a test jiggle in D.C. “We love the gyatt, but we need stronger infrastructure,” said Mayor Tom Harris. Official photos are still pending—cameras melted under the pressure—but stay tuned to the Massive Gyatt Blog for updates at <a href="index">your-site-name.netlify.app/index</a>.</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jiajun’s National Treasure Gyatt Coming Soon! Blame the melted cameras.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
