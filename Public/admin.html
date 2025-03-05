@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C8JFLTGHWM');
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Back to Home</a>
+            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-dashboard">
+            <h1>Admin Dashboard - Gyatt Statistics</h1>
+
+            <!-- Total Website Visits -->
+            <div class="stat-box">
+                <h2>Total Website Visits</h2>
+                <p id="totalVisits">Loading...</p>
+            </div>
+
+            <!-- Gyatt Popularity Comparison -->
+            <div class="stat-box">
+                <h2>Gyatt Popularity</h2>
+                <p id="gyattPopularity">Loading...</p>
+            </div>
+
+            <!-- Article Views -->
+            <div class="stat-box">
+                <h2>Article View Statistics</h2>
+                <ul id="articleViews">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+
+            <!-- Admin Controls (Optional, for manual updates) -->
+            <div class="admin-controls">
+                <h2>Update Stats</h2>
+                <input type="number" id="newVisitCount" placeholder="New total visits">
+                <input type="number" id="jiajunViews" placeholder="Jiajun article views">
+                <input type="number" id="jacobViews" placeholder="Jacob article views">
+                <button onclick="updateStats()">Save Changes</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <script>
+        // Load and display stats from localStorage or stats.json
+        async function loadStats() {
+            try {
+                // Try to fetch from stats.json (optional, for persistent storage on Netlify)
+                let stats = {};
+                try {
+                    const response = await fetch('/stats.json');
+                    stats = await response.json();
+                } catch (err) {
+                    // Fallback to localStorage if stats.json isn't available or fails
+                    stats = JSON.parse(localStorage.getItem('gyattStats') || '{}');
+                }
+
+                // Initialize stats if empty
+                if (!stats.totalVisits) stats.totalVisits = 0;
+                if (!stats.articleViews) stats.articleViews = {
+                    'Jiajun-Zu': 0,
+                    'Jiajun-Gyatt-Aliens': 0,
+                    'Jiajun-Gyatt-Crash': 0,
+                    'Jiajun-Gyatt-News': 0,
+                    'Jacob-Gyatt-Debut': 0,
+                    'Jacob-Gyatt-Challenge': 0,
+                    'Jacob-Gyatt-News': 0
+                };
+
+                // Increment total visits on page load (simulates a visit)
+                stats.totalVisits = (stats.totalVisits || 0) + 1;
+
+                // Calculate gyatt popularity (sum of article views for each)
+                const jiajunViews = Object.entries(stats.articleViews)
+                    .filter(([key]) => key.startsWith('Jiajun'))
+                    .reduce((sum, [, value]) => sum + value, 0);
+                const jacobViews = Object.entries(stats.articleViews)
+                    .filter(([key]) => key.startsWith('Jacob'))
+                    .reduce((sum, [, value]) => sum + value, 0);
+
+                // Update DOM
+                document.getElementById('totalVisits').textContent = stats.totalVisits;
+                document.getElementById('gyattPopularity').textContent = 
+                    `Jiajun: ${jiajunViews} views | Jacob: ${jacobViews} views | ${
+                        jiajunViews > jacobViews ? 'Jiajun’s gyatt is more popular!' : 
+                        jacobViews > jiajunViews ? 'Jacob’s gyatt is more popular!' : 
+                        'Both gyatts are equally legendary!'
+                    }`;
+                
+                const articleViewsList = document.getElementById('articleViews');
+                articleViewsList.innerHTML = '';
+                for (const [article, views] of Object.entries(stats.articleViews)) {
+                    const li = document.createElement('li');
+                    li.textContent = `${article}: ${views} views`;
+                    articleViewsList.appendChild(li);
+                }
+
+                // Save updated stats to localStorage (and optionally stats.json if you set up a build step)
+                localStorage.setItem('gyattStats', JSON.stringify(stats));
+            } catch (err) {
+                console.error('Error loading stats:', err);
+                document.getElementById('totalVisits').textContent = 'Error loading visits';
+                document.getElementById('gyattPopularity').textContent = 'Error loading popularity';
+                document.getElementById('articleViews').innerHTML = '<li>Error loading article views</li>';
+            }
+        }
+
+        // Function to manually update stats
+        function updateStats() {
+            const newVisitCount = parseInt(document.getElementById('newVisitCount').value) || 0;
+            const jiajunViews = parseInt(document.getElementById('jiajunViews').value) || 0;
+            const jacobViews = parseInt(document.getElementById('jacobViews').value) || 0;
+
+            let stats = JSON.parse(localStorage.getItem('gyattStats') || '{}');
+            stats.totalVisits = newVisitCount;
+            stats.articleViews = {
+                'Jiajun-Zu': jiajunViews / 4, // Distribute evenly among Jiajun articles
+                'Jiajun-Gyatt-Aliens': jiajunViews / 4,
+                'Jiajun-Gyatt-Crash': jiajunViews / 4,
+                'Jiajun-Gyatt-News': jiajunViews / 4,
+                'Jacob-Gyatt-Debut': jacobViews / 3, // Distribute evenly among Jacob articles
+                'Jacob-Gyatt-Challenge': jacobViews / 3,
+                'Jacob-Gyatt-News': jacobViews / 3
+            };
+
+            localStorage.setItem('gyattStats', JSON.stringify(stats));
+            loadStats(); // Refresh the display
+            alert('Stats updated successfully!');
+        }
+
+        // Load stats when the page loads
+        window.onload = loadStats;
+    </script>
+</body>
+</html>
