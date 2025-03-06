@@ -9,14 +9,14 @@
     <meta name="keywords" content="Jiajun, gyatt, massive gyatt, space, humor, satire, blog, booty, comedy">
     <meta name="author" content="Massive Gyatt Crew">
     <meta name="robots" content="index, follow">
-    <!-- Google Analytics Tag -->
+    <!-- Google Analytics Tag
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-C8JFLTGHWM');
-    </script>
+    </script> -->
     <link rel="stylesheet" href="styles.css">
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
      crossorigin="anonymous"></script> -->
