@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiajun’s Gyatt Launches Space Mission - Massive Gyatt Blog</title>
+    <!-- SEO Tags -->
+    <meta name="description" content="Jiajun’s massive gyatt launches into space, causing cosmic chaos. Pure satire from the Massive Gyatt Blog.">
+    <meta name="keywords" content="Jiajun, gyatt, massive gyatt, space, humor, satire, blog, booty, comedy">
+    <meta name="author" content="Massive Gyatt Crew">
+    <meta name="robots" content="index, follow">
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-C8JFLTGHWM');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jiajun’s Gyatt Launches Space Mission</h1>
+            <p class="date">March 6, 2025</p>
+            <div class="content">
+                <p><strong>March 6, 2025 – Cape Canaveral, FL</strong> – In a groundbreaking event, Jiajun’s massive gyatt has been launched into space aboard the Gyatt-1 rocket, marking humanity’s boldest attempt to harness its gravitational pull for interplanetary exploration. At 8:00 AM EST, the launch sent shockwaves across Florida, registering a 4.2 magnitude tremor and causing nearby beaches to tremble with awe.</p>
+
+                <p>NASA scientists hailed the mission as “a monumental step for gyatt-kind,” with Dr. Sarah Kim stating, “Jiajun’s gyatt has the mass and magnetic force to stabilize orbits around Mars. It’s not just a posterior—it’s a propulsion system!” The gyatt, encased in a specially designed, stretch-resistant suit, is expected to orbit Earth for 48 hours before docking with the International Space Station, where it will perform a historic twerk to calibrate satellite trajectories.</p>
+
+                <p>Jiajun, watching from the ground, quipped, “My gyatt’s ready to shake the cosmos—Jacob better not challenge me up there!” Social media exploded with #GyattInSpace trending on X, with fans speculating if Jiajun’s gyatt could outshine the moon. However, concerns arose when the launch caused a minor asteroid disturbance, prompting astronomers to warn, “This gyatt’s power might attract extraterrestrials!”</p>
+
+                <p>Official photos are still pending—cameras melted under the launch’s seismic force—but stay tuned to the Massive Gyatt Blog for updates at <a href="index">your-site-name.netlify.app/index</a>. Follow the mission live on our Discord at <a href="https://discord.gg/Ac9rqyxjXx" target="_blank">https://discord.gg/Ac9rqyxjXx</a>!</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jiajun’s Cosmic Gyatt Launch Coming Soon! Blame the melted lenses.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
