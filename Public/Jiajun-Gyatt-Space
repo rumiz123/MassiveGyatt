@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiajun’s Gyatt Launches Space Mission - Massive Gyatt Blog</title>
-    <!-- SEO Tags -->
-    <meta name="description" content="Jiajun’s massive gyatt launches into space, causing cosmic chaos. Pure satire from the Massive Gyatt Blog.">
-    <meta name="keywords" content="Jiajun, gyatt, massive gyatt, space, humor, satire, blog, booty, comedy">
-    <meta name="author" content="Massive Gyatt Crew">
-    <meta name="robots" content="index, follow">
-    <!-- Google Analytics Tag
+    <title>Jiajun’s Gyatt Breaks World Records - Massive Gyatt Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-C8JFLTGHWM');
-    </script> -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
-     crossorigin="anonymous"></script> -->
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C8JFLTGHWM');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -31,25 +26,21 @@
 
     <main>
         <article class="blog-post">
-            <h1 class="post-title">Jiajun’s Gyatt Launches Space Mission</h1>
-            <p class="date">March 6, 2025</p>
+            <h1 class="post-title">Jiajun’s Gyatt Breaks World Records</h1>
+            <p class="date">March 2, 2025</p>
             <div class="content">
-                <p><strong>March 6, 2025 – Cape Canaveral, FL</strong> – In a groundbreaking event, Jiajun’s massive gyatt has been launched into space aboard the Gyatt-1 rocket, marking humanity’s boldest attempt to harness its gravitational pull for interplanetary exploration. At 8:00 AM EST, the launch sent shockwaves across Florida, registering a 4.2 magnitude tremor and causing nearby beaches to tremble with awe.</p>
+                <p>It was a day like any other—until it wasn’t. The year was 2025, and the world was about to witness a seismic event so colossal it would make earthquakes jealous. Jiajun’s Gyatt, already the stuff of legends, decided it was tired of being just “massive.” Oh no, this gyatt had ambitions—GLOBAL ambitions. Last Tuesday, at approximately 3:47 PM EST, Jiajun walked into the Guinness World Records office in a pair of sweatpants that were screaming for mercy. The mission? To officially claim the title of "Most Monumental Posterior in Human History." Spoiler alert: they didn’t just win—they rewrote the rulebook.</p>
 
-                <p>NASA scientists hailed the mission as “a monumental step for gyatt-kind,” with Dr. Sarah Kim stating, “Jiajun’s gyatt has the mass and magnetic force to stabilize orbits around Mars. It’s not just a posterior—it’s a propulsion system!” The gyatt, encased in a specially designed, stretch-resistant suit, is expected to orbit Earth for 48 hours before docking with the International Space Station, where it will perform a historic twerk to calibrate satellite trajectories.</p>
+                <p>The officials, armed with measuring tapes and a look of sheer terror, attempted to quantify the unquantifiable. “It’s… it’s too big for our standard tools!” cried one judge, as his tape measure snapped like a twig under the sheer girth of Jiajun’s backside. Another fainted when the shadow of the gyatt darkened the room like a solar eclipse. After three hours, a team of NASA engineers was called in—yes, NASA—because apparently, only satellite imagery could capture the full scope of this booty. The final verdict? Jiajun’s Gyatt clocked in at a record-breaking “bigger than your wildest dreams,” officially dethroning Mount Everest as the planet’s most awe-inspiring natural wonder.</p>
 
-                <p>Jiajun, watching from the ground, quipped, “My gyatt’s ready to shake the cosmos—Jacob better not challenge me up there!” Social media exploded with #GyattInSpace trending on X, with fans speculating if Jiajun’s gyatt could outshine the moon. However, concerns arose when the launch caused a minor asteroid disturbance, prompting astronomers to warn, “This gyatt’s power might attract extraterrestrials!”</p>
-
-                <p>Official photos are still pending—cameras melted under the launch’s seismic force—but stay tuned to the Massive Gyatt Blog for updates at <a href="index">massivegyatt.com</a>. Follow the mission live on our Discord at <a href="https://discord.gg/Ac9rqyxjXx" target="_blank">https://discord.gg/Ac9rqyxjXx</a>!</p>
+                <p>But the story doesn’t end there. Word spread fast—too fast. By Wednesday, cults had formed, chanting “GYATT ALMIGHTY” outside Jiajun’s house. By Thursday, the internet crashed because someone tried to upload a blurry Snapchat of the gyatt, and it overloaded every server from here to Tokyo. I, your humble narrator, was there, still on my 5-week squeezing streak (still not gay, just dedicated), trying to process the jiggle that could launch a thousand memes. Unfortunately, we still don’t have pics—NASA’s still processing the data, and my phone melted when I tried to sneak a shot. But soon, oh yes, SOON, we’ll drop those images, and the world will never be the same. Imagine it: a gyatt so grand it gets its own zip code, its own gravitational pull, its own Netflix documentary narrated by David Attenborough. Stay tuned—this is history in the shaking.</p>
             </div>
-            <div class="image-placeholder">Pictures of Jiajun’s Cosmic Gyatt Launch Coming Soon! Blame the melted lenses.</div>
+            <div class="image-placeholder">Pictures of Jiajun’s Record-Breaking Gyatt Coming Soon! NASA’s working overtime.</div>
         </article>
     </main>
 
     <footer>
-        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
-            RAHHHHHHHHHHHHHHHHHHHHHHH
-        </p>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | <a href="privacy-policy" target="_blank">Privacy Policy</a> | Yea bro this joke costed me 20 bucks, thats like a vandal skin RAHHHHHHHHHHHHHHHHHHHHHHH</p>
     </footer>
 
     <!-- ToS Popup -->
