@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob’s Gyatt Creates Giant Ocean Wave - Massive Gyatt Blog</title>
+    <!-- SEO Tags -->
+    <meta name="description" content="Jacob’s massive gyatt generates a giant ocean wave, flooding coastlines. Pure satire from the Massive Gyatt Blog.">
+    <meta name="keywords" content="Jacob, gyatt, massive gyatt, ocean, wave, humor, satire, blog, booty, comedy">
+    <meta name="author" content="Massive Gyatt Crew">
+    <meta name="robots" content="index, follow">
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C8JFLTGHWM');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index">Home</a>
+            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jacob’s Gyatt Creates Giant Ocean Wave</h1>
+            <p class="date">March 7, 2025</p>
+            <div class="content">
+                <p><strong>March 7, 2025 – Pacific Ocean</strong> – Jacob’s massive gyatt has unleashed a colossal ocean wave today, sweeping across the Pacific and flooding coastal cities from Hawaii to Japan. The wave, measuring 50 feet high, was triggered when Jacob performed a record-breaking twerk on a beach in Los Angeles at 3:00 PM PST.</p>
+
+                <p>Oceanographers at NOAA labeled it “The Gyatt Tsunami,” attributing the wave’s power to Jacob’s gyatt’s unprecedented mass and motion. “This twerk displaced millions of gallons of water,” said Dr. Maria Gonzalez. “It’s a natural disaster with a dance beat!” The wave left surfers in awe and beachfront properties underwater, with social media lighting up with #GyattWave trending on X.</p>
+
+                <p>Jacob, drenched but grinning, said, “My gyatt’s making waves—literally! Pics are coming, but the saltwater ruined the cameras!” Fans are hailing it as a rival to Jiajun’s lunar earthquake, sparking calls for a dual gyatt event to test their combined power. Environmentalists, meanwhile, are studying the wave’s impact on marine life, dubbing it “the twerk that rocked the tides.”</p>
+
+                <p>Stay tuned to the Massive Gyatt Blog for official photos and updates at <a href="index">massivegyatt.com</a>. Join the wave of excitement on Discord at <a href="https://discord.gg/Ac9rqyxjXx" target="_blank">https://discord.gg/Ac9rqyxjXx</a>!</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jacob’s Wave-Making Gyatt Coming Soon! Blame the saltwater.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
