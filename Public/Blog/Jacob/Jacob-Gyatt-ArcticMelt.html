@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob’s Gyatt Melts Arctic Ice - Massive Gyatt Blog</title>
+    <!-- SEO Tags -->
+    <meta name="description" content="Jacob’s massive gyatt melts Arctic ice, raising global sea levels. Pure satire from the Massive Gyatt Blog.">
+    <meta name="keywords" content="Jacob, gyatt, massive gyatt, Arctic, melt, humor, satire, blog, booty, comedy">
+    <meta name="author" content="Massive Gyatt Crew">
+    <meta name="robots" content="index, follow">
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C8JFLTGHWM');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://massivegyatt.com/index">Home</a>
+            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1 class="post-title">Jacob’s Gyatt Melts Arctic Ice</h1>
+            <p class="date">March 9, 2025</p>
+            <div class="content">
+                <p><strong>March 9, 2025 – Arctic Circle</strong> – Jacob’s massive gyatt has melted a significant portion of Arctic ice today, raising global sea levels by an inch after a steamy twerk session near the North Pole at 8:00 AM UTC. The rapid thaw left polar bears swimming and climate scientists in disbelief.</p>
+
+                <p>Glaciologists at the University of Oslo stated, “Jacob’s gyatt’s heat output during that twerk was equivalent to a small volcano. It’s a gyatt-induced climate event!” The melt exposed new landmasses and sent icebergs drifting southward, prompting environmentalists to call it “The Gyatt Thaw.” Social media lit up with #ArcticGyatt trending on X, with fans cheering Jacob’s icy impact.</p>
+
+                <p>Jacob, basking in the glow, laughed, “My gyatt’s turning up the heat up north! Pics are coming, but the ice blinded the cameras!” Fans speculate Jiajun’s galactic storm might cool things down, sparking talks of a dual gyatt weather war. Authorities are assessing the sea level rise, warning coastal cities to prepare for the gyatt effect.</p>
+
+                <p>Stay tuned to the Massive Gyatt Blog for official photos and updates at <a href="https://massivegyatt.com/index">massivegyatt.com/index</a>. Join the icy excitement on Discord at <a href="https://discord.gg/Ac9rqyxjXx" target="_blank">https://discord.gg/Ac9rqyxjXx</a>!</p>
+            </div>
+            <div class="image-placeholder">Pictures of Jacob’s Ice-Melting Gyatt Coming Soon! Blame the icy glare.</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Massive Gyatt Blog | <a href="https://massivegyatt.com/terms-of-service" target="_blank">Terms of Service</a> | 
+            RAHHHHHHHHHHHHHHHHHHHHHHH
+        </p>
+    </footer>
+
+    <!-- ToS Popup -->
+    <div id="tosPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Terms of Service</h2>
+            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="https://massivegyatt.com/terms-of-service" target="_blank">Terms of Service</a> for details.</p>
+            <button onclick="acceptToS()">I Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+                if (cookie.indexOf(nameEQ) === 0) return cookie.substring(nameEQ.length, cookie.length);
+            }
+            return null;
+        }
+
+        // Function to show/hide popup and set cookie on accept
+        function acceptToS() {
+            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            document.getElementById('tosPopup').style.display = 'none';
+        }
+
+        // Check if ToS has been accepted on page load
+        window.onload = function() {
+            if (!getCookie('tosAccepted')) {
+                document.getElementById('tosPopup').style.display = 'flex';
+            }
+        };
+    </script>
+</body>
+</html>
