@@ -39,6 +39,21 @@ header a {
     padding: 0.5rem;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .join-button {
     background-color: #000;
     color: white;
@@ -390,66 +405,6 @@ footer {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
-}
-
-/* Gallery Styles */
-.gallery {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.gallery-title {
-    text-align: center;
-    font-size: 2.5em;
-    color: #ff69b4;
-    margin-bottom: 20px;
-}
-
-.gallery-description {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.gallery-section {
-    margin-bottom: 40px;
-}
-
-.gallery-section h2 {
-    font-size: 2em;
-    color: #ff4500;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.image-placeholder {
-    height: 200px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    margin-bottom: 10px;
-    border: 2px dashed #999;
-}
-
-.gallery-item p {
-    font-size: 1em;
-    color: #444;
 }
 
 /* Responsive Adjustments */
