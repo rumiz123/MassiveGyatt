@@ -9,6 +9,24 @@
         signOut: function(){
             localStorage.removeItem('mg_username');
         },
+        signUp: async function(name, pass){
+            const res = await fetch('/signup', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username: name, password: pass})
+            });
+            if(!res.ok) throw new Error('Signup failed');
+            this.setUser(name);
+        },
+        login: async function(name, pass){
+            const res = await fetch('/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username: name, password: pass})
+            });
+            if(!res.ok) throw new Error('Login failed');
+            this.setUser(name);
+        },
         getComments: function(){
             const key = 'mg_comments_' + window.location.pathname;
             try {
