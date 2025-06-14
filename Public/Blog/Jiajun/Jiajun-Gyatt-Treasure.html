@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiajun’s Gyatt Named National Treasure - Massive Gyatt Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
     <script>
@@ -16,15 +17,22 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
     crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index">Home</a>
-            <a href="https://discord.gg/Ac9rqyxjXx" class="join-button" target="_blank">Join The Discord Now</a>
+<body class="font-sans">
+    <header class="sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center py-4">
+            <a href="/index.html" class="text-2xl font-bold">Massive Gyatt</a>
+            <div class="space-x-4">
+                <a href="/Jiajun-Zu.html" class="hover:text-peach-500">Jiajun</a>
+                <a href="/Jacob-Williams.html" class="hover:text-peach-500">Jacob</a>
+                <a href="/Gallery/pictures.html" class="hover:text-peach-500">Gallery</a>
+                <a href="/terms-of-service.html" class="hover:text-peach-500">Terms</a>
+                <a href="/privacy-policy.html" class="hover:text-peach-500">Privacy</a>
+                <a href="https://discord.gg/Ac9rqyxjXx" class="button" target="_blank">Join Discord</a>
+            </div>
         </nav>
     </header>
 
-    <main>
+<main>
         <article class="blog-post">
             <h1 class="post-title">Jiajun’s Gyatt Named National Treasure</h1>
             <p class="date">March 5, 2025</p>
@@ -41,31 +49,31 @@
         </article>
     </main>
 
-    <footer>
-        <p>© 2025 Massive Gyatt Blog | <a href="terms-of-service" target="_blank">Terms of Service</a> | 
-            RAHHHHHHHHHHHHHHHHHHHHHHH
-        </p>
+        <footer class="py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2025 Massive Gyatt Blog | <a href="/terms-of-service.html" class="hover:text-peach-500">Terms of Service</a> | <a href="/privacy-policy.html" class="hover:text-peach-500">Privacy Policy</a></p>
+            <p class="mt-2">Built with 💨 for the gyatt enthusiasts!</p>
+        </div>
     </footer>
 
+
     <!-- ToS Popup -->
+    
     <div id="tosPopup" class="popup-overlay">
         <div class="popup-content">
-            <h2>Terms of Service</h2>
-            <p>Welcome to the Massive Gyatt Blog! By proceeding, you agree that all content on this site is a joke and cannot be used against the creator in any way. Please review our full <a href="terms-of-service" target="_blank">Terms of Service</a> for details.</p>
-            <button onclick="acceptToS()">I Accept</button>
+            <h2 class="text-2xl font-bold mb-4">Terms of Service</h2>
+            <p>Welcome to Massive Gyatt Blog! This is a satirical site. By proceeding, you agree all content is a joke and cannot be used against the creator. See our full <a href="/terms-of-service.html" class="text-peach-500">Terms of Service</a>.</p>
+            <button onclick="acceptToS()" class="button mt-4">I Accept</button>
         </div>
     </div>
 
     <script>
-        // Function to set a cookie
         function setCookie(name, value, days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             const expires = "expires=" + date.toUTCString();
             document.cookie = name + "=" + value + ";" + expires + ";path=/";
         }
-
-        // Function to get a cookie
         function getCookie(name) {
             const nameEQ = name + "=";
             const cookies = document.cookie.split(';');
@@ -76,19 +84,16 @@
             }
             return null;
         }
-
-        // Function to show/hide popup and set cookie on accept
         function acceptToS() {
-            setCookie('tosAccepted', 'true', 365); // Cookie lasts 1 year
+            setCookie('tosAccepted', 'true', 365);
             document.getElementById('tosPopup').style.display = 'none';
         }
-
-        // Check if ToS has been accepted on page load
         window.onload = function() {
-            if (!getCookie('tosAccepted')) {
+            if (!getCookie('tosAccepted') && window.location.pathname !== '/privacy-policy.html' && window.location.pathname !== '/terms-of-service.html') {
                 document.getElementById('tosPopup').style.display = 'flex';
             }
         };
     </script>
+
 </body>
 </html>
