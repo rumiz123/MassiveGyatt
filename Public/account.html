@@ -3,19 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob’s Gyatt Challenges Jiajun in Epic Showdown - Massive Gyatt Blog</title>
+    <title>Create Account - Massive Gyatt</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8JFLTGHWM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-C8JFLTGHWM');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4482193806715835"
-    crossorigin="anonymous"></script>
 </head>
 <body class="font-sans">
     <header class="sticky top-0 z-50">
@@ -33,39 +23,36 @@
         </nav>
     </header>
 
-<main>
-        <article class="blog-post">
-            <h1 class="post-title">Jacob’s Gyatt Challenges Jiajun in Epic Showdown</h1>
-            <p class="date">March 4, 2025</p>
-            <div class="content">
-                <p>The gyatt universe shook today as Jacob’s massive posterior challenged Jiajun’s legendary gyatt in an unprecedented twerk-off at Madison Square Garden. At 7:42 PM EST, the two titans faced off, their booties clashing with seismic force, registering a 4.5 magnitude tremor that knocked out power across New York City.</p>
-
-                <p>Fans chanted, “Gyatt for the win!” as Jacob’s jiggle sent shockwaves rivaling Jiajun’s iconic quake from earlier this week. “It’s a gyatt-off for the ages,” screamed announcer Big Booty Bob, as the crowd lost their minds. Jiajun countered with a signature twerk that nearly collapsed the arena, but Jacob’s gyatt responded with a bounce heard ‘round the world, earning a standing ovation.</p>
-
-                <p>No victor was declared—yet—but both gyatts left the stage unscathed, promising a rematch. “My gyatt’s ready to shake the planet again,” Jacob boasted, while Jiajun retorted, “The original gyatt reigns supreme.” Social media exploded with #GyattShowdown trending on X, with fans divided but united in awe. Official pics are still pending—cameras melted under the pressure—but stay tuned for the sequel on <a href="index">massivegyatt.com/index</a>.</p>
+    <main class="container mx-auto py-12">
+        <h1 class="text-3xl font-bold text-center mb-8">Account</h1>
+        <div class="max-w-md mx-auto space-y-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
+                <form id="signupForm" class="space-y-4">
+                    <input type="text" id="signupUsername" placeholder="Username" class="w-full p-2 rounded text-black">
+                    <input type="password" id="signupPassword" placeholder="Password" class="w-full p-2 rounded text-black">
+                    <button type="submit" class="button w-full">Sign Up</button>
+                </form>
             </div>
-            <div class="image-placeholder">Pictures of the Gyatt Showdown Coming Soon! Blame the melted lenses.</div>
-        </article>
-<section id="commentSection" class="mt-8">
-    <h2 class="text-2xl font-bold mb-4">Comments</h2>
-    <div id="comments" class="mb-4"></div>
-    <form id="commentForm">
-        <textarea id="commentInput" class="w-full p-2 text-black rounded mb-2" placeholder="Write a comment..."></textarea>
-        <button type="submit" class="button">Post Comment</button>
-    </form>
-</section>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Login</h2>
+                <form id="loginForm" class="space-y-4">
+                    <input type="text" id="loginUsername" placeholder="Username" class="w-full p-2 rounded text-black">
+                    <input type="password" id="loginPassword" placeholder="Password" class="w-full p-2 rounded text-black">
+                    <button type="submit" class="button w-full">Log In</button>
+                </form>
+            </div>
+            <p id="accountMsg" class="text-center"></p>
+        </div>
     </main>
 
-        <footer class="py-6">
+    <footer class="py-6">
         <div class="container mx-auto text-center">
             <p>© 2025 Massive Gyatt Blog | <a href="/terms-of-service.html" class="hover:text-peach-500">Terms of Service</a> | <a href="/privacy-policy.html" class="hover:text-peach-500">Privacy Policy</a></p>
             <p class="mt-2">Built with 💨 for the gyatt enthusiasts!</p>
         </div>
     </footer>
 
-
-    <!-- ToS Popup -->
-    
     <div id="tosPopup" class="popup-overlay">
         <div class="popup-content">
             <h2 class="text-2xl font-bold mb-4">Terms of Service</h2>
@@ -74,6 +61,33 @@
         </div>
     </div>
 
+    <script src="/app.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(e){
+            e.preventDefault();
+            const name = document.getElementById('signupUsername').value.trim();
+            const pass = document.getElementById('signupPassword').value.trim();
+            if(!name || !pass) return;
+            try {
+                await mgApp.signUp(name, pass);
+                document.getElementById('accountMsg').textContent = 'Signed up and logged in as ' + name;
+            } catch(err){
+                document.getElementById('accountMsg').textContent = 'Sign up failed';
+            }
+        });
+        document.getElementById('loginForm').addEventListener('submit', async function(e){
+            e.preventDefault();
+            const name = document.getElementById('loginUsername').value.trim();
+            const pass = document.getElementById('loginPassword').value.trim();
+            if(!name || !pass) return;
+            try {
+                await mgApp.login(name, pass);
+                document.getElementById('accountMsg').textContent = 'Logged in as ' + name;
+            } catch(err){
+                document.getElementById('accountMsg').textContent = 'Login failed';
+            }
+        });
+    </script>
     <script>
         function setCookie(name, value, days) {
             const date = new Date();
@@ -101,7 +115,5 @@
             }
         };
     </script>
-
-<script src="/app.js"></script>
 </body>
 </html>

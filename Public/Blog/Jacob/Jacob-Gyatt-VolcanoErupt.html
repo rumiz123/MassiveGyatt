@@ -30,6 +30,7 @@
                 <a href="/Gallery/pictures.html" class="hover:text-peach-500">Gallery</a>
                 <a href="/terms-of-service.html" class="hover:text-peach-500">Terms</a>
                 <a href="/privacy-policy.html" class="hover:text-peach-500">Privacy</a>
+                <a href="/account.html" class="hover:text-peach-500">Account</a>
                 <a href="https://discord.gg/Ac9rqyxjXx" class="button" target="_blank">Join Discord</a>
             </div>
         </nav>
@@ -50,6 +51,14 @@
             </div>
             <div class="image-placeholder">Pictures of Jacob’s Volcano-Erupting Gyatt Coming Soon! Blame the ash.</div>
         </article>
+<section id="commentSection" class="mt-8">
+    <h2 class="text-2xl font-bold mb-4">Comments</h2>
+    <div id="comments" class="mb-4"></div>
+    <form id="commentForm">
+        <textarea id="commentInput" class="w-full p-2 text-black rounded mb-2" placeholder="Write a comment..."></textarea>
+        <button type="submit" class="button">Post Comment</button>
+    </form>
+</section>
     </main>
 
         <footer class="py-6">
@@ -98,5 +107,6 @@
         };
     </script>
 
+<script src="/app.js"></script>
 </body>
 </html>
