@@ -14,9 +14,27 @@ body {
 }
 main {
     flex: 1 0 auto;
+    padding: 1rem;
 }
 footer {
     flex-shrink: 0;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Header Bar */
+header {
+    background-color: #1f1f2e !important;
+    border-bottom: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+}
+header nav a {
+    padding: 0.5rem 1rem;
 }
 
 /* Dark Theme */
